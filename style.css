@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(205, 175, 175);
+}
+
+section {
+    width: 100vmin;
+    height: 100vh;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tile {
+    height: 200px;
+    width: 170px;
+    position: relative;
+    /* border: 1px solid black; */
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    outline: none;
+    box-shadow: 15px 15px 25px rgba(2,28,53,0.05);
+}
+
+input[type="checkbox"]:after {
+    position: absolute;
+    content: "\f111";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 400;
+    font-size: 22px;
+    top: 10px;
+    left: 10px;
+    color: #e2e6f3;
+}
+
+input[type="checkbox"]:hover {
+    transform: scale(1.08);
+}
+
+input[type="checkbox"]:checked {
+    border: 3px solid  darkred;
+}
+
+input[type="checkbox"]:checked:after {
+    font-weight: 900;
+    content: "\f058";
+    color: darkred;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+}
+
+label .fa-solid {
+    font-size: 60px;
+    color: #2c2c51;
+}
+
+input[type="checkbox"]:checked + label .fa-solid {
+    animation: grow 0.5s;
+}
+
+@keyframes grow {
+    50% {
+        font-size: 80px;
+    }
+}
+
+label h6 {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #7b7b99;
+}
